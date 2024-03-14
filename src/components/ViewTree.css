@@ -1,0 +1,28 @@
+/* ViewTree.css */
+
+.tree-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.tree-node {
+  margin: 0 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+.node-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.node-children {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}

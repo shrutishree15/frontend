@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+components/ViewTree.css
+.mlm-tree-container {
+    display: flex;
+    justify-content: center;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .mlm-tree {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .mlm-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
   }
-}
+  
+  .mlm-node-content {
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .mlm-subtree {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .mlm-subtree:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border-left: 2px solid #000000;
+    border-top: 2px solid #000000;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transform: translateX(-50%) rotate(-45deg);
+  }
+  
+  .mlm-subtree li {
+    position: relative;
+  }
+  
+  .mlm-subtree li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: #000000;
+  }
+  
